@@ -11,20 +11,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-        image: ghcr.io/ricosjp/allgebra/doxygen:20.10.1
+      image: ghcr.io/ricosjp/allgebra/doxygen:20.10.1
+    strategy:
+      matrix:
+        version:
+          - 0.14.0
+          - 0.14.1
+          - 0.14.2
+          - master
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: 0.14.0
+        ref: ${{ matrix.version }}
     - name: Generate document
       run: |
         doxygen
         mkdir -p public
-        mv html public/0.14.0
+        mv html public/${{ matrix.version }}
     - uses: actions/upload-artifact@v2
       with:
-        name: doxygen-0.14.0
-        path: public/0.14.0
+        name: doxygen-${{ matrix.version }}
+        path: public/${{ matrix.version }}
 
   publish:
     runs-on: ubuntu-latest
