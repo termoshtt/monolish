@@ -14,20 +14,27 @@ jobs:
         image: ghcr.io/ricosjp/allgebra/doxygen:20.10.1
     steps:
     - uses: actions/checkout@v2
-    - name: doxygen
-      shell: bash
+      with:
+        ref: 0.14.0
+    - name: Generate document
       run: |
         doxygen
-        mv html public
-        git fetch --prune --unshallow
-        for version in 0.14.2 0.14.1 0.14.0; do
-        git checkout $version
-        doxygen
-        mv html public/$version/ 
-        done
+        mv html public/0.14.0
+    - uses: actions/upload-artifact@v2
+      with:
+        name: doxygen-0.14.0
+        path: public/0.14.0
 
-    - name: deploy_pages
-      uses: peaceiris/actions-gh-pages@v3
+  publish:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: doxygen-0.14.0
+        path: public/0.14.0
+    - uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public/
