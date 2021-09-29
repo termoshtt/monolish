@@ -19,6 +19,7 @@ jobs:
     - name: Generate document
       run: |
         doxygen
+        mkdir -p public
         mv html public/0.14.0
     - uses: actions/upload-artifact@v2
       with:
