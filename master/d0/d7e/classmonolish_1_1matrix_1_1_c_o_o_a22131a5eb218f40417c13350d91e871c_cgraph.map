@@ -1,0 +1,12 @@
+<map id="monolish::matrix::COO::transpose" name="monolish::matrix::COO::transpose">
+<area shape="rect" id="node1" title="create transposed matrix from COO matrix (B = A^T)" alt="" coords="5,267,176,308"/>
+<area shape="rect" id="node2" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#ad8e551f918ffbcd275d919982ccf013b" title="get # of col" alt="" coords="234,5,405,47"/>
+<area shape="rect" id="node3" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#a7370fe7df97bb35b64e9ffc189962dab" title="get column index" alt="" coords="234,71,405,112"/>
+<area shape="rect" id="node4" href="$d0/dda/classmonolish_1_1_logger.html#a695fdd10db424e3c9040acc654c488b2" title=" " alt="" coords="238,136,401,177"/>
+<area shape="rect" id="node5" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#ac55f5f5dc8f3d3d76f75e5a801d6ca7a" title="get # of non&#45;zeros" alt="" coords="234,201,405,243"/>
+<area shape="rect" id="node6" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#af27892f2720971d28d81967261d252d2" title="get # of row" alt="" coords="234,267,405,308"/>
+<area shape="rect" id="node7" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#aa9fa00263d56ca3debff4424ead035f8" title="get row index" alt="" coords="234,332,405,373"/>
+<area shape="rect" id="node8" href="$d0/d7e/classmonolish_1_1matrix_1_1_c_o_o.html#ae69ba1014e456b1828461fdaaadfd321" title="get value" alt="" coords="234,397,405,439"/>
+<area shape="rect" id="node9" href="$d0/dda/classmonolish_1_1_logger.html#a0d1e5348ac7d410ebcec20bbe780ab2e" title=" " alt="" coords="228,463,411,490"/>
+<area shape="rect" id="node10" href="$d0/dda/classmonolish_1_1_logger.html#a07488fb4f4f25adc6140566f616a4de3" title=" " alt="" coords="224,514,415,541"/>
+</map>
